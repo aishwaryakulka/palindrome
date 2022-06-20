@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link rel="stylesheet" type="biodata.css" href="style.css">
+    <title>Palindrome</title>
+    <meta charset="utf-8">
+  </head>
+  <body>
+      <h1>check in console</h1>
+    <script>
+        function palindrome(str){
+            str = str.toLowerCase();
+            let len = str.length;
+            for(let index=0; index<len/2; index++){
+                if(str[index] != str[len-index-1]){
+                    return false;
+                }
+            }
+            return true;
+        }
+
+        function pal(str){
+            let toArr = str.split("");
+            let revArr = toArr.reverse();
+            let revStr = revArr.join("");
+            if(str==revStr){
+                return true;
+            }
+            else{
+                return false;
+            }
+        }
+        console.log(palindrome("nama"));
+        console.log(pal("abcba"));
+    </script>
+</body>
+</html>
